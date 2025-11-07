@@ -1,0 +1,31 @@
+{
+  "name": "reflectify-journal",
+  "version": "1.0.0",
+  "description": "A minimalist journaling web app built with Node.js, Express.js, and EJS for writing and reflecting on daily thoughts.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gnzlla/reflectify-journal.git"
+  },
+  "keywords": [
+    "journaling",
+    "Node.js",
+    "Express.js",
+    "EJS"
+  ],
+  "author": "Ellaine Gonzales",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gnzlla/reflectify-journal/issues"
+  },
+  "homepage": "https://github.com/Gnzlla/reflectify-journal#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}
