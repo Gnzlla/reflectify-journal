@@ -5,9 +5,27 @@
         <div class="main-note-container">
             <div class="mini-note1">
                 <div class="mini-note2">
+                    <h1 class="your-notes">Your Notes:</h1>
+                    <div class="note-links">
+                        <ul>
+                            <li>
+                                My crush noticed me!
+                            </li>
+                            <li>
+                                My crush noticed me!
+                            </li>
+                            <li>
+                                My crush
+                            </li>
+                        </ul>
+                    </div>
+                    <form action="/input" method="POST">
+                        <div class="button-container"><button type="submit" class="post-button">Post a Note</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 
-<%- include ("partials/footer.ejs") %>
+    <%- include ("partials/footer.ejs") %>

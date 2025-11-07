@@ -12,8 +12,12 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", (req, res) =>{
     res.render("index.ejs")
+});
+
+app.post("/input", (req, res) =>{
+    res.render("input-page.ejs")
 })
 
 app.listen(port, () =>{
     console.log(`Server is running on port ${port}`)
-})
+});
