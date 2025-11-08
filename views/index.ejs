@@ -7,22 +7,14 @@
                 <div class="mini-note2">
                     <h1 class="your-notes">Your Notes:</h1>
                     <div class="note-links">
-                        <ul>
-                            <li>
-                                My crush noticed me!
-                            </li>
-                            <li>
-                                My crush noticed me!
-                            </li>
-                            <li>
-                                My crush
-                            </li>
+                        <ul> <% posts.forEach(post=>{ %>
+                            <li><%= post.postTitle %></li>
+                        <% }) %>
                         </ul>
                     </div>
-                    <form action="/input" method="POST">
-                        <div class="button-container"><button type="submit" class="post-button">Post a Note</button>
-                        </div>
-                    </form>
+                    <div class="button-container">
+                        <a href="/post" class="post-button">Post a Note</a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,21 +1,31 @@
 import express from "express";
 import bodyParser from "body-parser";
-import { dirname } from "path";
-import { fileURLToPath } from "url";
 
 const app = express();
 const port = 3000;
-const _dirname = dirname(fileURLToPath(import.meta.url));
+
+let posts =[]
 
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", (req, res) =>{
-    res.render("index.ejs")
+    res.render("index.ejs", {posts: posts});
 });
 
-app.post("/input", (req, res) =>{
-    res.render("input-page.ejs")
+app.get("/post", (req, res)=>{
+    res.render("post.ejs")
+})
+
+app.post("/post", (req, res) =>{
+     const newPost = {
+        postTitle : req.body["title"],
+        postMessage: req.body["message"]
+    }
+    posts.push(newPost);
+    console.log(req.body)
+    console.log("Posts in the array: ", posts)
+    res.redirect("/");
 })
 
 app.listen(port, () =>{

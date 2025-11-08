@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+    <div class="main-input-card">
+        <div class="input-card1">
+            <div class="input-card2">
+                <form action="/post" method="POST">
+                    <input type="text" class="post-title" name="title" placeholder="Enter Title">
+                    <hr>
+                    <textarea class="message" name="message" rows="4" cols="50"
+                        placeholder="What’s on your mind today?"></textarea>
+                    <div class="input-button-container"><button type="submit" class="input-post-button">Post
+                            Note</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <%- include("partials/footer.ejs") %>
