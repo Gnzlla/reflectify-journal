@@ -1,0 +1,76 @@
+.main-input-card {
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.input-card1,
+.input-card2 {
+    background-color: #FDF9D8;
+    width: 655px;
+    height: 455px;
+    flex-shrink: 0;
+    border-radius: 74.937px;
+    box-shadow: 10.336px 10.336px 31.267px 0 rgba(0, 0, 0, 0.25);
+}
+
+.input-card1 {
+    transform: rotate(5.60deg);
+    margin-top: 40px;
+    left: 40px;
+    top: 40px
+}
+
+.input-card2 {
+    position: absolute;
+    top: -30px;
+    right: 20px;
+    transform: rotate(-5.60deg);
+}
+
+.post-title {
+    color: #FD7E35;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 900;
+    margin-left: 75px;
+    margin-top: 50px;
+    margin-bottom: 0;
+    font-size: 32px;
+    border: transparent;
+    background-color: transparent;
+    width: 500px;
+}
+
+.message{
+    border: transparent;
+    background-color: transparent;
+    width: 500px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    margin-left: 75px;
+    margin-top: 2px;
+    margin-bottom: 0;
+    color: #FD7E35;
+    height: 280px;
+    resize: none;
+    font-size: 25px;
+    text-align: justify;
+}
+
+
+hr {
+    margin-top: 0;
+    width: 500px;
+    height: 2px;
+    background-color: #FD7E3550;
+    text-wrap: true;
+}
+
+.post-title::placeholder, .message::placeholder {
+    color: #FD7E3550;
+}
+
+.post-title:focus, .message:focus {
+    outline: none;
+}
