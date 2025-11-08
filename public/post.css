@@ -52,12 +52,14 @@
     margin-top: 2px;
     margin-bottom: 0;
     color: #FD7E35;
-    height: 280px;
+    height: 260px;
     resize: none;
     font-size: 25px;
     text-align: justify;
+    overflow: visible;
+scrollbar-width: none;
+scroll-behavior: smooth;
 }
-
 
 hr {
     margin-top: 0;
@@ -65,6 +67,32 @@ hr {
     height: 2px;
     background-color: #FD7E3550;
     text-wrap: true;
+    border: none;
+}
+
+.input-button-container{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+}
+
+.input-post-button{
+    background-color: #5C8001;
+    color: white;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 19PX;
+    padding: 10px 40px;
+    border-radius: 15px;
+    border: transparent;
+    box-shadow: 8.269px 8.269px 25.013px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    margin-bottom: 30px;
+    margin-right: 70px;
+}
+
+a{
+    text-decoration: none;
 }
 
 .post-title::placeholder, .message::placeholder {
