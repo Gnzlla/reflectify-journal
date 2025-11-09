@@ -1,4 +1,4 @@
-.main-input-card {
+.main-input-card, #content-container {
     display: flex;
     justify-content: center;
     flex-shrink: 0;
@@ -93,6 +93,11 @@ hr {
 
 a{
     text-decoration: none;
+    color: #FD7E35;
+}
+
+.link-text:hover{
+    font-weight: bold;
 }
 
 .post-title::placeholder, .message::placeholder {

@@ -9,7 +9,7 @@
                     <div class="note-links">
                         <!-- Loops through each (title) in the array named posts. -->
                         <ul> <% posts.forEach(post=>{ %> 
-                            <li><%= post.postTitle %></li>
+                            <li><a class="link-text" href="/posts/<%= post.slugURL %>"><%= post.postTitle %></a></li>
                         <% }) %>
                         </ul>
                     </div>
