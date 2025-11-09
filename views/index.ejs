@@ -7,12 +7,14 @@
                 <div class="mini-note2">
                     <h1 class="your-notes">Your Notes:</h1>
                     <div class="note-links">
-                        <ul> <% posts.forEach(post=>{ %>
+                        <!-- Loops through each (title) in the array named posts. -->
+                        <ul> <% posts.forEach(post=>{ %> 
                             <li><%= post.postTitle %></li>
                         <% }) %>
                         </ul>
                     </div>
                     <div class="button-container">
+                        <!-- redirects user to /post page -->
                         <a href="/post" class="post-button">Post a Note</a>
                     </div>
                 </div>
