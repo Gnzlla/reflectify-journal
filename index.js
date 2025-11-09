@@ -13,18 +13,20 @@ app.get("/", (req, res) =>{
     res.render("index.ejs", {posts: posts});
 });
 
+// used /GET to just showcase the page; not submit!
 app.get("/post", (req, res)=>{
     res.render("post.ejs")
 })
 
+//When user submits a post
 app.post("/post", (req, res) =>{
      const newPost = {
         postTitle : req.body["title"],
         postMessage: req.body["message"]
     }
+    // Lists the new entry to the array
     posts.push(newPost);
-    console.log(req.body)
-    console.log("Posts in the array: ", posts)
+
     res.redirect("/");
 })
 

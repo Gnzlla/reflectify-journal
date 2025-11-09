@@ -57,8 +57,8 @@
     font-size: 25px;
     text-align: justify;
     overflow: visible;
-scrollbar-width: none;
-scroll-behavior: smooth;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
 }
 
 hr {
@@ -101,4 +101,14 @@ a{
 
 .post-title:focus, .message:focus {
     outline: none;
+}
+
+.input-card1:hover{
+    width: 675px;
+    height: 475px;
+    transition: transform 2s ease-in-out;
+}
+
+.input-post-button:hover{
+    background-color: #527201;
 }
