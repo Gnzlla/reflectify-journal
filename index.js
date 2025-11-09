@@ -32,7 +32,20 @@ app.post("/post", (req, res) => {
   res.redirect("/");
 });
 
-//URL friendly name for the title:
+
+app.get("/posts/:slugURL", (req, res)=>{
+    // gets the dynamic part of the URL (the slug from /posts/:slugURL)
+    const slug = req.params.slugURL;
+
+    // searches the posts array for the post that has a matching slug
+    const foundPost = posts.find(post => post.slugURL === slug);
+
+    if (foundPost){
+        res.render("content.ejs",{postURL: foundPost});
+    } else{
+        res.redirect("/")
+    }
+});
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
