@@ -1,35 +1,39 @@
 import express from "express";
 import bodyParser from "body-parser";
+import slugify from "slugify";
 
 const app = express();
 const port = 3000;
 
-let posts =[]
+let posts = [];
 
-app.use(express.static("public"))
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/", (req, res) =>{
-    res.render("index.ejs", {posts: posts});
+app.get("/", (req, res) => {
+  res.render("index.ejs", { posts: posts});
 });
 
 // used /GET to just showcase the page; not submit!
-app.get("/post", (req, res)=>{
-    res.render("post.ejs")
-})
+app.get("/post", (req, res) => {
+  res.render("post.ejs");
+});
 
 //When user submits a post
-app.post("/post", (req, res) =>{
-     const newPost = {
-        postTitle : req.body["title"],
-        postMessage: req.body["message"]
-    }
-    // Lists the new entry to the array
-    posts.push(newPost);
+app.post("/post", (req, res) => {
+  const newPost = {
+    postTitle: req.body["title"],
+    postMessage: req.body["message"],
+    slugURL: slugify(req.body["title"], { replacement: "-", lower: true })
+  };
 
-    res.redirect("/");
-})
+  posts.push(newPost);
+  console.log(newPost.slugURL);
+  res.redirect("/");
+});
 
-app.listen(port, () =>{
-    console.log(`Server is running on port ${port}`)
+//URL friendly name for the title:
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
